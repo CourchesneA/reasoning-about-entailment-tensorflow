@@ -1,0 +1,3 @@
+﻿sentence1	sentence2	gold_label
+There is a teddy bear in the bag and it is blue.	The teddy bear is red. 
+Sandrine and Juliette are talking because she is upset.	Sandrine is upset. 

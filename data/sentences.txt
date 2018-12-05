@@ -1,0 +1,18 @@
+    1. Comparisons 
+
+Time flies like an arrow.	Time goes by quickly. 	Entailment 
+The girl’s eyes are the colour of the sky.	The girl has brown eyes.	Contradiction
+The man danced as well as Micheal Jackson.		The man was a talented dancer.	Entailment 
+The assignment was a piece of cake. 		The assignment was easy.	Entailment 
+
+    2. Context dependant (entailment depends on context) 
+
+The woman put on her gloves, her scarf and her hat before leaving the house. 	It is cold outside. 	Entailment
+The bell rang and the students left the classroom. 	The class is over. 	Entailment
+The actors in stage are bowing and the public is applauding. 	A show just ended.	Entailment 
+
+    3. Ambiguous (interesting to see what the model predicts in suc cases) 
+(contradictions or not)
+
+There is a teddy bear in the bag and it is blue.	The teddy bear is red. 
+Sandrine and Juliette are talking because she is upset.	Sandrine is upset. 

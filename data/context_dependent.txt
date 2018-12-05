@@ -1,0 +1,4 @@
+﻿sentence1	sentence2	gold_label
+The woman put on her gloves, her scarf and her hat before leaving the house. 	It is cold outside. 	Entailment
+The bell rang and the students left the classroom. 	The class is over. 	Entailment
+The actors in stage are bowing and the public is applauding. 	A show just ended.	Entailment 

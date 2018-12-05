@@ -1,0 +1,5 @@
+﻿sentence1	sentence2	gold_label
+Time flies like an arrow.	Time goes by quickly. 	entailment
+The girl’s eyes are the colour of the sky.	The girl has brown eyes.	contradiction
+The man danced as well as Micheal Jackson.	The man was a talented dancer.	entailment
+The assignment was a piece of cake.	 The assignment was easy.	entailment
