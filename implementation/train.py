@@ -5,7 +5,7 @@ import numpy as np
 import sys
 import os
 import math
-from plumbing import load_dataset, load_word_embeddings, dataset_preprocess
+from plumbing import load_reduced_dataset, load_dataset, load_word_embeddings, dataset_preprocess
 
 from networks import TensorflowTrainable, RNN, LSTMCell, AttentionLSTMCell
 from batching import DataBatcher
