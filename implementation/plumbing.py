@@ -34,6 +34,27 @@ def load_multilni_dataset(dataset_dir):
 
     return dataset
 
+def load_reduced_dataset(dataset_dir):
+     print("Loading reduced SNLI dataset")
+     dataset = {}
+     for split in ['train', 'dev', 'test']:
+         split_path = os.path.join(dataset_dir, 'snli_1.0_{}.txt'.format(split))
+         df = pd.read_csv(split_path, delimiter='\\t')
+         print(len(df[[sentence1]].values[1:len(df[[sentence1]].values)/4]))
+         if split == 'train':
+             dataset[split] = {
+                 premises: df[[sentence1]].values[1:len(df[[sentence1]].values)/4],
+                 hypothesis: df[[sentence2]].values[1:len(df[[sentence1]].values)/4],
+                 targets: df[[gold_label]].values[1:len(df[[sentence1]].values)/4]
+             }
+         else:
+             dataset[split] = {
+                 premises: df[[sentence1]].values,
+                 hypothesis: df[[sentence2]].values,
+                 targets: df[[gold_label]].values
+             }
+
+         return dataset
 
 def load_word_embeddings(embeddings_dir):
     print("Loading Word Embeddings")

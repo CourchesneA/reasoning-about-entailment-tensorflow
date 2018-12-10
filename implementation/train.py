@@ -46,7 +46,7 @@ parameters.update(training_parameters)
 # #### Load Dataset + Pre-trained Embeddings
 
 
-dataset = dataset_preprocess(load_dataset(parameters['dataset_directory']))
+dataset = dataset_preprocess(load_reduced_dataset(parameters['dataset_directory']))
 embeddings = load_word_embeddings(parameters['embeddings_path'])
 
 
