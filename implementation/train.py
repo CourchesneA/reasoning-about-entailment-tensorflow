@@ -15,10 +15,9 @@ project_root = os.path.dirname(os.getcwd())
 
 parameters = {
     "runs_dir": os.path.join(project_root, 'runs'),
-    "testset_directory": os.path.join(project_root, 'snli_1.0'),
-    "dataset_directory": os.path.join(project_root, 'data/multinli_0.9/multinli_0.9'),
+    "dataset_directory": os.path.join(project_root, 'snli_1.0'),
     "embeddings_path": os.path.join(project_root, 'GNews-Vectors.bin'),
-    "model_name": "attention_lstm2",
+    "model_name": "attention_lstm3",
 }
 
 batch_parameters = {
@@ -47,7 +46,6 @@ parameters.update(training_parameters)
 # #### Load Dataset + Pre-trained Embeddings
 
 
-testset = dataset_preprocess(load_dataset(parameters['dataset_directory']))
 dataset = dataset_preprocess(load_dataset(parameters['dataset_directory']))
 embeddings = load_word_embeddings(parameters['embeddings_path'])
 
