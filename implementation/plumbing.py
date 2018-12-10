@@ -23,9 +23,12 @@ def load_dataset(dataset_dir):
 def load_multilni_dataset(dataset_dir):
     print("Loading multinli dataset")
     dataset = {}
-    for split in ['train', 'dev_mismatched']:
-        split_path = os.path.join(dataset_dir, 'multinli_0.9_{}.txt'.format(split))
-        df = pd.read_csv(split_path, delimiter='\t')
+    for split in ['train', 'test']:
+	fid = 'train'
+	if split is not 'train':
+		fid = 'dev_mismatched'
+        split_path = os.path.join(dataset_dir, 'multinli_0.9_{}.txt'.format(fid))
+        df = pd.read_csv(split_path, delimiter='\t', error_bad_lines=False)
         dataset[split] = {
             "premises": df[["sentence1"]].values,
             "hypothesis": df[["sentence2"]].values,

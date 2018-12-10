@@ -5,7 +5,7 @@ import numpy as np
 import sys
 import os
 import math
-from plumbing import load_dataset, load_word_embeddings, dataset_preprocess
+from plumbing import load_dataset, load_multilni_dataset, load_word_embeddings, dataset_preprocess
 
 from networks import TensorflowTrainable, RNN, LSTMCell, AttentionLSTMCell
 from batching import DataBatcher
@@ -16,7 +16,7 @@ project_root = os.path.dirname(os.getcwd())
 parameters = {
     "runs_dir": os.path.join(project_root, 'runs'),
     "testset_directory": os.path.join(project_root, 'snli_1.0'),
-    "dataset_directory": os.path.join(project_root, 'data/multinli_0.9/multinli_0.9'),
+    "dataset_directory": os.path.join(project_root, 'data/multinli_0.9'),
     "embeddings_path": os.path.join(project_root, 'GNews-Vectors.bin'),
     "model_name": "attention_lstm2",
 }
@@ -47,8 +47,8 @@ parameters.update(training_parameters)
 # #### Load Dataset + Pre-trained Embeddings
 
 
-testset = dataset_preprocess(load_dataset(parameters['dataset_directory']))
-dataset = dataset_preprocess(load_dataset(parameters['dataset_directory']))
+#testset = dataset_preprocess(load_dataset(parameters['dataset_directory']))
+dataset = dataset_preprocess(load_multilni_dataset(parameters['dataset_directory']))
 embeddings = load_word_embeddings(parameters['embeddings_path'])
 
 
